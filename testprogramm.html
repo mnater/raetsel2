@@ -1,0 +1,26 @@
+<html >
+	<head>
+		<title>Test1</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			const gesuchteZahl = Math.floor(Math.random() * 100);
+			//alert(gesuchteZahl);
+			let anzVersuche = 1;
+
+			let benutzerZahl = parseInt(prompt("Welche Zahl?"), 10);
+			
+			while (benutzerZahl !== gesuchteZahl) {
+				if (benutzerZahl < gesuchteZahl) {
+					benutzerZahl = parseInt(prompt("Grösser!"), 10);
+				} else if (benutzerZahl > gesuchteZahl) {
+					benutzerZahl = parseInt(prompt("Kleiner!"), 10);
+				}
+				anzVersuche = anzVersuche + 1;
+			}
+			alert("Du hast sie gefunden! Du hast " + anzVersuche + " gebraucht.");
+
+		</script>
+	</body>
+</html>
